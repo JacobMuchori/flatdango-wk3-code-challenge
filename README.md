@@ -1,4 +1,4 @@
-# week-2-code-challenge
+# Flatdango code challenge
 
 # Description
 This code challenge is about a mini-web application called Flatdange which allows the user to purchase movie tickets from the Flatiron movie theater.The user should be able to see a list of movies on the left menu and when the user clicks on a movie title, they should be able to see the movies details displayed.There is also a buy ticket button that allows the user to purchase a movie ticket.
