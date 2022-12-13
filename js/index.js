@@ -2,16 +2,16 @@ const filmDetails = document.getElementById("film-descr")
 
 //Fetches all our data from our film api
 function loadFilms() {
-    fetch("http://localhost:3000/films")
+    fetch("https://jacobmuchori.github.io/db.json")
     .then((response)=> response.json())
-    .then((filmsObj=> filmsObj.forEach(films => displayfilmNames(films))));
+    .then((data => data.films.forEach(films => displayfilmNames(films))));
 }
 
 //fetches and displays the first films data
 function dispfirstfilm() {
-    fetch("http://localhost:3000/films/1")
+    fetch("https://jacobmuchori.github.io/db.json")
     .then((response)=> response.json())
-    .then((films1 => displayMovieDetails(films1)))
+    .then((data => displayMovieDetails(data.films[0])))
 }
 
 //displays all the films titles on the left menu
@@ -49,10 +49,11 @@ function displayMovieDetails(films) {
     //This button enables us to purchase a ticket
     filmButton.addEventListener("click", function reduceTickets() {
         if (remaindertickets>=0) {
-            return availabletickets.textContent =`Available tickets: ${remaindertickets--}`
+            availabletickets.textContent =`Available tickets: ${remaindertickets--}`
         }
         else if (remaindertickets < 0) {
-            return availabletickets.textcontent=`Available tickets: ${remaindertickets=0}`
+            availabletickets.textcontent=`Available tickets: ${remaindertickets=0}`
+            filmButton.innerText= 'Sold out'
         }
     })
 
