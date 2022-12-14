@@ -7,6 +7,8 @@ To run the application:
 ### Alternative one.
 Click on the Github pages link provided and you will be directed to the mini-web application directly.
 
+        https://jacobmuchori.github.io/flatdango-wk3-code-challenge/
+
 ### Alternative two.
 ### Installation
 To be able to run this program on your computer:
